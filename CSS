@@ -132,3 +132,63 @@ body {
 .header-Logo:active{
         transform: scale(1.01);
 }
+
+.rotating-logo-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -99; 
+    pointer-events: none; 
+    user-select: none; 
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.15; 
+}
+
+.rotating-logo {
+    width: 300px; 
+    height: 300px;
+    animation: rotateLogo 70s linear infinite; /* Анимация вращения */
+    filter: 
+        drop-shadow(0 0 15px rgba(189, 136, 203, 0.4))
+        drop-shadow(0 0 35px rgba(64, 78, 237, 0.3));
+    opacity: 0.3;
+}
+
+/* Анимация вращения */
+@keyframes rotateLogo {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    25% {
+        transform: rotate(90deg) scale(1.05);
+    }
+    50% {
+        transform: rotate(180deg) scale(1.1);
+    }
+    75% {
+        transform: rotate(270deg) scale(1.05);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+    .rotating-logo {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .rotating-logo {
+        width: 150px;
+        height: 150px;
+    }
+}
