@@ -56,7 +56,7 @@ body {
 .header-button:hover{
     background-color: rgba(64, 78, 237, 0.666);
     transform: translateY(-3px);
-    border: solid 1px white;
+    border: solid 1px rgba(255, 255, 255, 0.568);
     box-shadow: 0 3px 30px rgba(60, 73, 219, 0.666);
 }
 .discord-icon {
@@ -128,7 +128,7 @@ body {
         filter: drop-shadow(0 0 10px rgba(64, 78, 237, 0.7))
         drop-shadow(0 0 10px rgba(234, 0, 255, 0.304)) 
         
-    }
-    .header-Logo:active{
+}
+.header-Logo:active{
         transform: scale(1.01);
-    }
+}
