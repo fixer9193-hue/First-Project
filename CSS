@@ -80,7 +80,7 @@ body {
 }
 
 .hero-title {
-    text-shadow: 0 2px 30px rgba(216, 40, 216, 0.355);
+    text-shadow: 0 2px 20px rgba(216, 40, 216, 0.355);
     font-size: 70px;
 }
 .subtitle {
@@ -160,7 +160,6 @@ body {
     opacity: 0.3;
 }
 
-/* Анимация вращения */
 @keyframes rotateLogo {
     0% {
         transform: rotate(0deg) scale(1);
