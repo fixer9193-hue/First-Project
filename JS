@@ -1,0 +1,26 @@
+const subtitle = document.querySelector('.hero-subtitle')
+const text = subtitle.textContent
+subtitle.textContent = '';
+
+let i = 0
+function typeWriter(){
+    if(i < text.length){
+        subtitle.textContent +=text.charAt(i)
+    i++
+    setTimeout(typeWriter, 40)
+    }
+}
+typeWriter()
+
+const themeBtn = document.querySelector('#theme-btn');
+const icon = document.querySelector('.icon');
+if (themeBtn && icon) {
+    themeBtn.addEventListener('click', function() {
+        document.body.classList.toggle('theme-light');
+        if (document.body.classList.contains('theme-light')) {
+            icon.textContent = '☀️';
+        } else {
+            icon.textContent = '🌙';
+        }
+    });
+}
