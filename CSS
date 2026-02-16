@@ -16,6 +16,8 @@ body {
     height: auto;
     color: white;
     text-transform: uppercase;
+    min-height: 100vh;
+    
 }
 
 .header {
@@ -28,7 +30,11 @@ body {
     border-bottom: solid 1px rgba(152, 158, 152, 0.121);
     backdrop-filter: blur(5px);
 }
-
+.header-menu{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 .Logo {
     margin-right: auto;
     font-size: 16px;
@@ -59,6 +65,12 @@ body {
     border: solid 1px rgba(255, 255, 255, 0.568);
     box-shadow: 0 3px 30px rgba(60, 73, 219, 0.666);
 }
+.theme-toggle:hover{
+    background-color: rgba(240, 248, 255, 0.13);
+    transform: translateY(-3px);
+    box-shadow: 0 2px 20px rgba(255, 255, 255, 0.168);
+    border: 1px solid white;
+}
 .discord-icon {
     width: 13px;
     height: 13px;
@@ -81,7 +93,7 @@ body {
 
 .hero-title {
     text-shadow: 0 2px 20px rgba(216, 40, 216, 0.355);
-    font-size: 70px;
+    font-size: 72px;
 }
 .subtitle {
     
@@ -89,6 +101,20 @@ body {
     color:transparent
     
 }
+
+.theme-toggle{
+    background: rgba(47, 47, 47, 0.336);
+    border: solid 1px rgba(36, 36, 197, 0.526); 
+    padding: 7px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 .hero-subtitle {
     font-weight: 100;
     padding-top: 20px;
@@ -114,6 +140,8 @@ body {
     opacity: 0.3;        
     pointer-events: none; 
 }
+
+
 @keyframes gradientFlow {
     0%, 100% { background-position: 0% center; }
     50% { background-position: 100% center; }
@@ -149,11 +177,27 @@ body {
     align-items: center;
     opacity: 0.15; 
 }
-
+.header-button {
+    overflow: hidden;
+    position: relative;
+}
+.header-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+}
+.header-button:hover::before {
+    left: 100%;
+}
 .rotating-logo {
     width: 300px; 
     height: 300px;
-    animation: rotateLogo 70s linear infinite; /* Анимация вращения */
+   animation: rotateLogo 70s linear infinite; 
     filter: 
         drop-shadow(0 0 15px rgba(189, 136, 203, 0.4))
         drop-shadow(0 0 35px rgba(64, 78, 237, 0.3));
@@ -191,3 +235,17 @@ body {
         height: 150px;
     }
 }
+
+
+.hero-subtitle::after{
+    content: "|";
+    margin-left: 5px;
+    color: #ff00ff;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {opacity: 0.7;}
+    50% {opacity: 0;}
+}
+ 
