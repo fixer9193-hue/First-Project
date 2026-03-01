@@ -251,6 +251,28 @@ opacity: 0.3;
     transform: translateY(1px);
 }
 
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px); 
+        filter: blur(5px);           
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);    
+        filter: blur(0);
+    }
+}
+
+.hero-title {
+    animation: fadeInUp 0.7s ease-out forwards;
+}
+
+.hero-subtitle {
+    opacity: 0; 
+    animation: fadeInUp 1s ease-out 0.4s forwards; 
+}
+
 .hero-subtitle::after{
     content: "|";
     margin-left: 5px;
