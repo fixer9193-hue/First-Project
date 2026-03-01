@@ -17,6 +17,7 @@ body {
     color: white;
     text-transform: uppercase;
     min-height: 100vh;
+    transform: 0.5s;
     
 }
 
@@ -69,7 +70,7 @@ body {
     background-color: rgba(240, 248, 255, 0.13);
     transform: translateY(-3px);
     box-shadow: 0 2px 20px rgba(255, 255, 255, 0.168);
-    border: 1px solid white;
+    border: 1px solid rgba(255, 255, 255, 0.482);
 }
 .discord-icon {
     width: 13px;
@@ -87,6 +88,7 @@ body {
     transform: scale(1.01);
     text-shadow: 0 1px 6px black;
 }
+
 .Logo:active{
     transform: scale(1.001);
 }
@@ -141,6 +143,15 @@ body {
     pointer-events: none; 
 }
 
+body.theme-light {
+    background-color: rgb(255, 255, 255);
+    color: rgb(44, 43, 43);
+}
+
+body.theme-light .video-background {
+filter: invert(100%);
+opacity: 0.3;
+}
 
 @keyframes gradientFlow {
     0%, 100% { background-position: 0% center; }
@@ -236,6 +247,9 @@ body {
     }
 }
 
+.theme-toggle:active{
+    transform: translateY(1px);
+}
 
 .hero-subtitle::after{
     content: "|";
